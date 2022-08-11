@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class chapter1 {
+public class Chapter1 {
     // -----------------------------------------------------
     // ? what we benefit from using enums
     // One of the big advantages of using enums is that it limits the possible
@@ -263,11 +263,11 @@ public class chapter1 {
     // ----------------------------------------------------------------------------------------------------------------------
 
     private static void initializeInventory(Inventory inventory) {
-        GuitarSpec spec = new chapter1().new GuitarSpec("Stratocastor", Builder.FENDER, Type.ACOUSTIC,
+        GuitarSpec spec = new Chapter1().new GuitarSpec("Stratocastor", Builder.FENDER, Type.ACOUSTIC,
                 Wood.INDIAN_ROSEWOOD,
                 Wood.SITKA, StringNum.EIGHT);
         inventory.addGuitar("V95693", 1299.95, spec);
-        spec = new chapter1().new GuitarSpec("Stratocastor", Builder.GIBSON, Type.ACOUSTIC,
+        spec = new Chapter1().new GuitarSpec("Stratocastor", Builder.GIBSON, Type.ACOUSTIC,
                 Wood.BRAZILIAN_ROSEWOOD,
                 Wood.BRAZILIAN_ROSEWOOD, StringNum.EIGHT);
         inventory.addGuitar("V9512", 1599.95, spec);
@@ -276,7 +276,7 @@ public class chapter1 {
 
     public static void main(String[] args) {
         // Set up Rick’s guitar inventory
-        chapter1 app = new chapter1();
+        Chapter1 app = new Chapter1();
         Inventory inventory = app.new Inventory();
         initializeInventory(inventory);
         // ? the customer only provides you with specs so why to make a new guitar

@@ -19,7 +19,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class chapter1Starter {
+public class Chapter1Starter {
     public class Guitar {
         private String serialNumber, builder, model, type, backWood, topWood;
         private double price;
@@ -136,9 +136,9 @@ public class chapter1Starter {
     public class FindGuitarTester {
         public static void main(String[] args) {
             // Set up Rick’s guitar inventory
-            Inventory inventory = new chapter1Starter().new Inventory();
+            Inventory inventory = new Chapter1Starter().new Inventory();
             initializeInventory(inventory);
-            Guitar whatErinLikes = new chapter1Starter().new Guitar("", 0, "fender", "Stratocastor",
+            Guitar whatErinLikes = new Chapter1Starter().new Guitar("", 0, "fender", "Stratocastor",
                     "electric", "Alder", "Alder");
             Guitar guitar = inventory.search(whatErinLikes);
             if (guitar != null) {

@@ -31,7 +31,7 @@
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class chapter2 {
+public class Chapter2 {
     public class DogDoor {
         private boolean open;
 
@@ -86,8 +86,8 @@ public class chapter2 {
     // ---------------------------------------------------------------------------------
     public class DogDoorSimulator {
         public static void main(String[] args) {
-            DogDoor door = new chapter2().new DogDoor();
-            Remote remote = new chapter2().new Remote(door);
+            DogDoor door = new Chapter2().new DogDoor();
+            Remote remote = new Chapter2().new Remote(door);
             System.out.println("Fido barks to go outside.");
             remote.pressButton();
             System.out.println("Fido has gone outside.");
