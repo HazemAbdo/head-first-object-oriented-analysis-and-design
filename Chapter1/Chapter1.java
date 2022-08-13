@@ -1,3 +1,4 @@
+package Chapter1;
 
 //* Great software in 3 easy steps
 // 1.Make sure your software does what the customer wants it to do
@@ -9,7 +10,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Chapter1 {
-    // -----------------------------------------------------
     // ? what we benefit from using enums
     // One of the big advantages of using enums is that it limits the possible
     // values you can supply to a method...no more misspellings or case issues.
@@ -283,8 +283,8 @@ public class Chapter1 {
         // ?with price and serial number that didn't used
         // we will make a guiterSpec object to hold the specs
         // just encapsulate those properties away from Guitar into a new object?
-        // Encapsulation is also about breaking your app into logical
-        // parts, and then keeping those parts separate.
+        // * Encapsulation is also about breaking your app into logical
+        // * parts, and then keeping those parts separate.
         // ------------------------------------
         // There’s nothing a well-designed object hates more than being
         // used to do something that really isn’t its true purpose.

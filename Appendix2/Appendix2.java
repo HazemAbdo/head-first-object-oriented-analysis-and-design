@@ -1,3 +1,4 @@
+package Appendix2;
 public class Appendix2 {
     // -----------inheritance example---------------
     public class Airplane {
