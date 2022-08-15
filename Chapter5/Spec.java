@@ -2,8 +2,12 @@ package Chapter5;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class Spec {
+    // When you have a set of properties that vary
+    // across your objects, use a collection, like a Map,
+    // to store those properties dynamically.
     private Map<String, Object> properties;
 
     public Spec(Map<String, Object> properties) {
@@ -23,8 +27,12 @@ public class Spec {
     }
 
     public boolean matches(Spec otherSpec) {
-        for (String key : properties.keySet()) {
-            if (!properties.get(key).equals(otherSpec.getProperty(key))) {
+        for (Iterator i = otherSpec.getProperties().keySet().iterator(); i.hasNext();) {
+            String PropertyName = (String) i.next();
+            System.out.println("PropertyName: " + PropertyName);
+            System.out.println(this.getProperty(PropertyName));
+            System.out.println(otherSpec.getProperty(PropertyName));
+            if (!this.getProperty(PropertyName).equals(otherSpec.getProperty(PropertyName))) {
                 return false;
             }
         }
@@ -33,7 +41,9 @@ public class Spec {
 
     public void print() {
         for (String key : properties.keySet()) {
-            System.out.println(key + ": " + properties.get(key));
+            if (key != "instrumentType") {
+                System.out.println(key + ": " + properties.get(key));
+            }
         }
     }
 

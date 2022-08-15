@@ -1,11 +1,6 @@
 package Chapter5;
 
-//* OO Principles
-//1.Encapsulate what varies.
-//2.Code to an interface rather than to an implementation.
-//3.Each class in your application should have only one reason to change.
-import java.util.Iterator;
-import java.util.LinkedList;
+
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
@@ -15,19 +10,21 @@ public class Chapter5 {
         Inventory inventory = new Inventory();
         inventory.initializeInventory();
         Map properties = new HashMap();
-        properties.put("builder", Builder.FENDER);
-        properties.put("model", "Stratocastor");
-        properties.put("type", Type.ELECTRIC);
-        properties.put("topWood", Wood.INDIAN_ROSEWOOD);
-        properties.put("backWood", Wood.SITKA);
-        properties.put("numStrings", StringNum.SIX);
-        Spec spec = new Spec(properties);
-        LinkedList matchingInstruments = inventory.search(spec);
-        for (Iterator i = matchingInstruments.iterator(); i.hasNext();) {
-            Instrument instrument = (Instrument) i.next();
-            System.out.println(instrument.getType());
-            instrument.getSpec().print();
-            System.out.println("--------------------");
+        properties.put("builder", Builder.GIBSON);
+        properties.put("backWood", Wood.MAPLE);
+        Spec clientSpec = new Spec(properties);
+        List matchingInstruments = inventory.search(clientSpec);
+        if (matchingInstruments.size() > 0) {
+            System.out.println("You might like these instruments:");
+            for (int i = 0; i < matchingInstruments.size(); i++) {
+                Instrument instrument = (Instrument) matchingInstruments.get(i);
+                Spec spec = instrument.getSpec();
+                System.out
+                        .println("We have a " + spec.getProperty("instrumentType") + " with the following properties:");
+                spec.print();
+            }
+        } else {
+            System.out.println("Sorry, your search returned no results.");
         }
     }
 }

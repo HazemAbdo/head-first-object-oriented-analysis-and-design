@@ -1,7 +1,7 @@
 package Chapter5;
 
 public enum InstrumentType {
-    GUITAR, MANDOLIN;
+    GUITAR, MANDOLIN, BANJO;
 
     public String toString() {
         switch (this) {
@@ -9,6 +9,8 @@ public enum InstrumentType {
                 return "Guitar";
             case MANDOLIN:
                 return "Mandolin";
+            case BANJO:
+                return "Banjo";
             default:
                 return "";
         }
