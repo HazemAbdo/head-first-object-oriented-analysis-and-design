@@ -3,6 +3,23 @@ package Chapter7;
 import java.util.List;
 import java.util.ArrayList;
 
+//* Scenario: 
+//I’d like to think so. I help in gathering requirements, in being sure your use cases are
+//complete, but also in architecture, helping you //* reduce risk and reduce the chaos and confusion
+//around what a particular module or piece of code does.
+//------------------------
+//scenario e.g.
+//Game designer creates board with a height and width.
+//Player 2 moves tanks onto (4, 5).
+//Player 2 moves army onto (4, 5).
+//Player 1 moves artillery onto (4, 5).
+//Game requests units from (4, 5).
+//Player 1 battles Player 2
+//Game requests terrain at (4, 5).
+//Player 2’s units win the battle.
+//Player 1’s units are removed from (4, 5).
+//Player 1 moves subs to (2, 2).
+//Game requests terrain at (2, 2).
 public class Board {
     private int width, height;
     private List tiles;
