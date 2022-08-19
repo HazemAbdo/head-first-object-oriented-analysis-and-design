@@ -32,7 +32,7 @@ public class Unit {
         return properties.get(propertyName);
     }
 
-    public void setProperty(STRING propertyName, Object propertyValue) {
+    public void setProperty(String propertyName, Object propertyValue) {
         properties.put(propertyName, propertyValue);
     }
 
