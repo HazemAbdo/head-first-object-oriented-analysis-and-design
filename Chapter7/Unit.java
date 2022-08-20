@@ -17,8 +17,8 @@ import java.util.Map;
 // 50|****************|51**********************************|1
 // 100|***************|101*********************************|1
 public class Unit {
-    String unitType;
-    Map<String, Object> properties;
+    private String unitType;
+    private Map<String, Object> properties;
 
     public String getUnitType() {
         return unitType;
